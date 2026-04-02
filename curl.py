@@ -2,15 +2,16 @@ import pycurl
 from io import BytesIO 
 import certifi 
 import ollama 
-
+'''
 def read_input(filename) : 
     with open(filename, "r") as f:
        return f.read().strip() #strip is for removing the newline at the end of the file
+'''
     
 def main() : 
     try :
         buffer = BytesIO()
-        website = "https://en.wikipedia.org/wiki/Mark_Antony" #complete with web link
+        website = "" #complete with web link
         c = pycurl.Curl() 
         c.setopt(c.URL, website)
         c.setopt(c.FOLLOWLOCATION, True) #follow redirects like a browser would ; good for errors
